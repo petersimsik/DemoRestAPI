@@ -6,9 +6,19 @@ pipeline {
        label 'jenkins_agent'
     }
     stages {
-        stage('hello') {
+        stage('build') {
             steps {
-                sh 'echo Hello Jenkins!'
+                sh 'mvn build'
+            }
+        }
+        stage('test') {
+            steps {
+                sh 'mvn test'
+            }
+        }
+        stage('deploy') {
+            steps {
+                sh 'mvn deploy'
             }
         }
     }
