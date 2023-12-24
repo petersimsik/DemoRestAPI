@@ -3,7 +3,9 @@
 pipeline {
     agent 
     {
-        label: 'jenkins_agent'
+        docker {
+            label: 'jenkins_agent'
+        }   
     }
     stages {
         stage('hello') {
