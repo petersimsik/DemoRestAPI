@@ -1,7 +1,10 @@
 
 
 pipeline {
-    agent jenkins_agent
+    agent 
+    {
+        label: 'jenkins_agent'
+    }
     stages {
         stage('hello') {
             steps {
