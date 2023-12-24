@@ -3,7 +3,7 @@
 pipeline {
     agent 
     {
-        dockerContainer {
+        node {
             label: 'jenkins_agent'
         }   
     }
