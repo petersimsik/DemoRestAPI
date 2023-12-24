@@ -8,17 +8,12 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'mvn build'
+                sh 'mvn clean package'
             }
         }
         stage('test') {
             steps {
                 sh 'mvn test'
-            }
-        }
-        stage('deploy') {
-            steps {
-                sh 'mvn deploy'
             }
         }
     }
