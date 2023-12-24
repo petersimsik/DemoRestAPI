@@ -3,9 +3,7 @@
 pipeline {
     agent 
     {
-        node {
-            label: 'jenkins_agent'
-        }   
+       label 'jenkins_agent'
     }
     stages {
         stage('hello') {
